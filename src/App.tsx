@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import BlinkText from './components/Text/BlinkText';
+import Text from './components/Text/Text';
+import Button from './components/Button/Button';
 
+//import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <> 
+    <BlinkText color='secondary' >Blinking Text</BlinkText>
+    <Text underline={false} strong={true}>Some Text</Text>
+    <Button>Click me</Button>
+   </> 
   );
+
 }
 
 export default App;
