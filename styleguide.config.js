@@ -6,6 +6,7 @@ module.exports = {
         savePropValueAsString: true,
     }).parse,
     getExampleFilename(componentPath){
+       console.log(componentPath.replace(/src/,'src\\docs' ).replace(/\.tsx?$/,'.md'));
        return componentPath.replace(/src/,'src\\docs' ).replace(/\.tsx?$/,'.md');
     },
    moduleAliases: {

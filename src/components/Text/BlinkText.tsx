@@ -21,6 +21,7 @@ const useStyles = makeStyles({
     }  
 });
 
+/**A text component with **fadein** and **fadeout** animation */
 const BlinkText:FC<props> = (props)=>{
   const classes = useStyles(props);  
   return  (     <Typography

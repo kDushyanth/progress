@@ -1,9 +1,21 @@
-#### Button with border radius attribute
+
+onClickHandler used:
+``` noeditor
+const onClickHandler = (event)=>{
+        alert('custom handler')
+}
+```
 ``` tsx padded
-<Button  variant='outlined' br={20}>first</Button>
-<Button  variant='contained'>second</Button>
-<Button diabled variant='text'
->third</Button>
+const onClickHandler = ()=>{
+        alert('custom handler');
+}
+<>
+<Button  variant='outlined' br={20} onClickHandler={onClickHandler}>first</Button>
+
+<Button  variant='contained' onClickHandler={onClickHandler}>second</Button>
+
+<Button diabled variant='text' onClickHandler={onClickHandler}>third</Button>
+</>
 ```
 
 

@@ -1,12 +1,7 @@
-import React from 'react';
-import './App.css';
-import BlinkText from './components/Text/BlinkText';
-import Text from './components/Text/Text';
-import Button from './components/Button/Button';
-import DateTimePickers from './components/DateTimePicker/DateTimePicker';
-import MySelect from './components/Select/Select';
-import CheckboxesTags from './components/AutoComplete/AutoComplete';
-const top100Films = [
+* `options` define the data used for autocomplete
+* `options` prop should be array of objects with title property
+```
+const options = [
   { title: 'The Shawshank Redemption', year: 1994 },
   { title: 'The Godfather', year: 1972 },
   { title: 'The Godfather: Part II', year: 1974 },
@@ -41,40 +36,11 @@ const top100Films = [
   { title: 'Interstellar', year: 2014 },
 ];
 
-function App() {
-  return (
-   <> 
-    <BlinkText color='secondary' >Blinking Text</BlinkText>
-    <Text 
-    underline={false} 
-    strong={true}
-    >
-      Some Text
-    </Text>
-    <Button>Click me</Button>
-    <DateTimePickers 
-    id={'date_time'}
-    type = {'datetime-local'}
-    defaultValue = {'2021-06-12T10:30'}
-    label={'date and time'}
-    >
-    </DateTimePickers>
-    <MySelect 
-    items={['Male','Female']} 
-    item={'gender'}
-    >
-    </MySelect>
-    <CheckboxesTags
-    options={top100Films}
+<AutoComplete
+    options = {options}
     width={400}
     ml={10}
     mt={10}
     >
-    </CheckboxesTags>
-    
-   </> 
-  );
-
-}
-
-export default App;
+</AutoComplete>
+```
