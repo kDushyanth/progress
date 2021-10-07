@@ -65,5 +65,4 @@ const CheckboxesTags:FC<props> = ({options,width=400,ml=0,mt=0,mr=0,mb=0})=>{
   );
 }
 
-// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 export default CheckboxesTags;
